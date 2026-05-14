@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'components.dart';
+import 'students_page.dart';
 import 'theme.dart';
 
 void main() {
@@ -89,6 +90,18 @@ class _MyHomePageState extends State<MyHomePage> {
                   );
                 },
               ),
+              ListTile(
+               leading: const Icon(Icons.person),
+               title: const Text('Alunos'),
+               onTap: () {
+                 Navigator.pop(context);
+                 Navigator.push(
+                   context,
+                   MaterialPageRoute(builder: (_) => const StudentsPage()),
+                 );
+               },
+             ),
+
             ],
           ),
         ),
